@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    /* Ajusta el tamaño del contenido según tus necesidades */
+    flex-grow: 1;
+    background-color: rgb(248, 167, 45);
+  }
+  
+  footer {
+    background-color: #b90404;
+    padding: 20px;
+  }
+  .scrollable-content {
+      height: 750px; /* Ajusta la altura máxima del contenido visible */
+      overflow-y: scroll;
+    }
+  
+  header{
+      height: 30vh;   
+  }
+  
+  img {
+      display: block;
+      margin: auto;
+  }
+  .menu {
+      display: flex;
+      flex-direction: column;
+      float: left;
+    }
+    
+    .menu a {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    .menu img {
+      width: 100px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    }
+  
+  
