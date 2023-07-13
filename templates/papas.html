@@ -57,6 +57,20 @@
     .menu img {
       width: 100px; /* Ajusta el tamaño de la imagen según tus necesidades */
     }
+
+    .menu-boton {
+      display: flex;
+      flex-direction: column;
+      float: right;
+      margin: 20px 100px;
+      
+    }
+    
+    .menu-boton a {
+      display: block;
+      margin-bottom: 10px;
+
+    }
   
   
 </style>
@@ -73,18 +87,20 @@
   </header>
 
   <main >
-    <ul class="nav justify-content-center">
+    <div class="menu-boton">
+      <ul class="nav justify-content-end">
 
 
-      <li class="nav-item">
-        <button type="button" class="btn btn-secondary btn-lg">Carrito</button>
-      </li>
-      
-
-    </ul>
+        <li class="nav-item ">
+          <button type="button" class="btn btn-dark btn-lg">Carrito</button>
+        </li>
+        
+  
+      </ul>
+    </div>
     <div class="menu">
      
-        <a class="btn btn-secondary btn-lg" aria-current="page" href="/home">Home</a>
+        <a class="btn btn-dark btn-lg" aria-current="page" href="/home">Home</a>
       <br>
       
       <a href="/papas"><img src="{{imagen_url2  }}" alt="Botón 1"></a>

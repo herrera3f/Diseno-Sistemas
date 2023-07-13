@@ -59,6 +59,20 @@
       width: 100px; /* Ajusta el tamaño de la imagen según tus necesidades */
     }
   
+    .menu-boton {
+      display: flex;
+      flex-direction: column;
+      float: right;
+      margin: 20px 100px;
+      
+    }
+    
+    .menu-boton a {
+      display: block;
+      margin-bottom: 10px;
+
+    }
+    
   
 </style>
 
@@ -74,15 +88,18 @@
   </header>
 
   <main >
-    <ul class="nav justify-content-center">
+    <div class="menu-boton">
+      <ul class="nav justify-content-end">
 
 
-      <li class="nav-item">
-        <button type="button" class="btn btn-dark btn-lg">Carrito</button>
-      </li>
-      
+        <li class="nav-item ">
+          <a class="btn btn-dark btn-lg" aria-current="page" href="/carrito">carrito</a>
+        </li>
+        
+  
+      </ul>
+    </div>
 
-    </ul>
     <div class="menu">
      
       <a class="btn btn-dark btn-lg" aria-current="page" href="/home">Home</a>
@@ -105,7 +122,7 @@
             <div class="card-body">
               <h5 class="card-title">{{ producto.titulo }}</h5>
               <p class="card-text">{{ producto.desc }}</p>
-              <a href="#" class="btn btn-primary">carrito</a>
+              <a href="/agregar_hamburguesa/{{ producto._id }}" class="btn btn-primary">Agregar al carrito</a>
             </div>
           </div>
         </div>
@@ -126,7 +143,7 @@
             <div class="card-body">
               <h5 class="card-title">{{ producto.titulo }}</h5>
               <p class="card-text">{{ producto.desc }}</p>
-              <a href="#" class="btn btn-primary">carrito</a>
+              <a href="/carrito" class="btn btn-primary">Ver en el carrito</a>
             </div>
           </div>
         </div>
@@ -147,7 +164,7 @@
             <div class="card-body">
               <h5 class="card-title">{{ producto.titulo }}</h5>
               <p class="card-text">{{ producto.desc }}</p>
-              <a href="#" class="btn btn-primary">carrito</a>
+              <a href="/agregar_bebida/{{ producto._id }}" class="btn btn-primary">Agregar al carrito</a>
             </div>
           </div>
         </div>

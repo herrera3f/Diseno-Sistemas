@@ -92,49 +92,31 @@
 
 
         <li class="nav-item ">
-          <button type="button" class="btn btn-dark btn-lg">Carrito</button>
+          <a class="btn btn-dark btn-lg" aria-current="page" href="/home">Home</a>
         </li>
         
   
       </ul>
-    </div>
-    <div class="menu">
-     
-        <a class="btn btn-dark btn-lg" aria-current="page" href="/home">Home</a>
-      <br>
       
-      <a href="/papas"><img src="{{imagen_url2  }}" alt="Botón 1"></a>
-      <a href="/hamburguesas"><img src="{{ imagen_url3}}" alt="Botón 2"></a>
-      <a href="/bebidas"><img src="{{  imagen_url4}}" alt="Botón 3"></a>
-
     </div>
-
     <div class="container">
-  
-
-      <h1>bebidas</h1>
+      <h1>Carrito de compras</h1>
       <hr>
       <div class="row">
-        {% for producto in bebidas %}
+        {% for producto in carrito %}
         <div class="col-md-4">
-          <div class="card mb-4" style="height: 37rem;">
-            <img src="{{ producto.image }}" class="card-img-top" alt="Imagen de la hamburguesa">
+          <div class="card mb-4" style="height: 35rem;">
+            <img src="{{ producto.image }}" class="card-img-top" alt="Imagen del producto">
             <div class="card-body">
               <h5 class="card-title">{{ producto.titulo }}</h5>
               <p class="card-text">{{ producto.desc }}</p>
-              <a href="#" class="btn btn-primary">carrito</a>
+              <a href="#" class="btn btn-danger">Eliminar</a>
             </div>
           </div>
         </div>
-        {% if loop.index % 3 == 0 %}
-        </div>
-        <div class="row">
-        {% endif %}
         {% endfor %}
       </div>
     </div>
-
-    
 
   </main>
 
